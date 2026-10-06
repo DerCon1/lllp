@@ -22,8 +22,8 @@
     :root {
       --paper: #efeae0;
       --ink: #171613;
-      --muted: #6f695f;
-      --rule: #b9b1a3;
+      --muted: #6b655b;
+      --rule: #b7afa0;
       --max: 1180px;
     }
 
@@ -67,9 +67,9 @@
       text-transform: uppercase;
     }
 
-    .masthead .motto {
+    .masthead .note {
       margin: 0;
-      font-size: 0.93rem;
+      font-size: 0.9rem;
       font-style: italic;
       color: var(--muted);
     }
@@ -130,8 +130,7 @@
     footer {
       border-top: 1px solid var(--ink);
       display: flex;
-      justify-content: space-between;
-      gap: 24px;
+      justify-content: flex-start;
       padding-top: 13px;
       font-family: "Source Sans 3", Arial, sans-serif;
       font-size: 0.69rem;
@@ -159,13 +158,11 @@
         font-size: clamp(3.6rem, 14vw, 6rem);
       }
 
-      .copy {
-        max-width: 670px;
-      }
+      .copy { max-width: 670px; }
     }
 
     @media (max-width: 520px) {
-      .masthead .motto { display: none; }
+      .masthead .note { display: none; }
 
       main {
         gap: 48px;
@@ -188,11 +185,6 @@
       .copy p:not(.lead):not(.closing) {
         font-size: 1.04rem;
       }
-
-      footer {
-        flex-direction: column;
-        gap: 6px;
-      }
     }
   </style>
 </head>
@@ -201,7 +193,7 @@
   <div class="page">
     <header class="masthead">
       <p class="name">Long Live Libre Press</p>
-      <p class="motto">For a reading life.</p>
+      <p class="note">Books and thoughts in circulation.</p>
     </header>
 
     <main>
@@ -213,11 +205,11 @@
       <section class="copy">
         <p class="lead">Books are better when they lead somewhere.</p>
 
-        <p>Long Live Libre Press exists to keep books, ideas and reading in circulation.</p>
+        <p>Long Live Libre Press keeps books, ideas and reading in circulation.</p>
 
         <p>Each collection brings three carefully chosen books into company with one another, with original writing on why they belong together, what passes between them, and where they might lead you next.</p>
 
-        <p>For curious readers, slow discovery, and a life lived with books.</p>
+        <p>For curious readers, for slow discovery, for a life lived with books.</p>
 
         <p class="closing">The first collections are taking shape.</p>
       </section>
@@ -225,7 +217,6 @@
 
     <footer>
       <p>© 2026 Long Live Libre Press</p>
-      <p>Books and thoughts in circulation.</p>
     </footer>
   </div>
 </body>
