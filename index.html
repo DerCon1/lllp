@@ -4,194 +4,73 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Long Live Libre Press — For a reading life.</title>
-  <meta name="description" content="Long Live Libre Press is an independent project devoted to books, discovery and the life that develops around reading.">
-  <meta name="theme-color" content="#f2eee5">
-
+  <meta name="description" content="Long Live Libre Press is an independent reading project built around discovery, curation and the connections between books.">
+  <meta property="og:title" content="Long Live Libre Press">
+  <meta property="og:description" content="For a reading life. Thoughtful curation, original editorial work and reading collections built around the connections between books.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://longlivelibrepress.com/">
+  <meta name="theme-color" content="#f2efe7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --paper: #f2eee5;
-      --ink: #1d1d1b;
-      --muted: #6f6a61;
-      --rule: #cfc7b9;
-      --max: 860px;
+    :root{--paper:#f2efe7;--ink:#181816;--muted:#6b665d;--rule:#bdb6a8;--max:1180px}
+    *{box-sizing:border-box}
+    html{background:var(--paper)}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Baskerville",Baskerville,Georgia,serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    .page{width:min(calc(100% - 52px),var(--max));min-height:100vh;margin:0 auto;display:flex;flex-direction:column;padding:26px 0 24px}
+    .masthead{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:13px 0 12px}
+    .masthead p{margin:0;font-family:"Source Sans 3",Arial,sans-serif;text-transform:uppercase}
+    .masthead .name{font-size:.76rem;font-weight:600;letter-spacing:.22em}
+    .masthead .note{font-size:.68rem;letter-spacing:.11em;color:var(--muted)}
+    main{flex:1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.8fr);gap:clamp(70px,10vw,150px);align-items:center;padding:clamp(96px,13vh,155px) 0 clamp(92px,12vh,145px)}
+    .hero h1{margin:0;max-width:7ch;font-size:clamp(4.2rem,9vw,8.8rem);line-height:.92;letter-spacing:-.055em;font-weight:400}
+    .tagline{margin:30px 0 0;font-size:clamp(1.35rem,2.4vw,1.95rem);line-height:1.25;font-style:italic}
+    .copy{max-width:520px;align-self:end}
+    .copy .lead{margin:0 0 28px;font-size:clamp(1.3rem,2vw,1.6rem);line-height:1.45}
+    .copy p:not(.lead){margin:0 0 18px;font-size:1rem;line-height:1.72}
+    .status{margin-top:32px;padding-top:15px;border-top:1px solid var(--rule);font-family:"Source Sans 3",Arial,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+    footer{border-top:1px solid var(--ink);display:flex;justify-content:space-between;gap:24px;padding-top:13px;font-family:"Source Sans 3",Arial,sans-serif;font-size:.7rem;color:var(--muted)}
+    footer p{margin:0}
+    @media(max-width:840px){
+      .page{width:min(calc(100% - 34px),var(--max));padding-top:18px}
+      main{grid-template-columns:1fr;gap:58px;align-items:start;padding:11vh 0 10vh}
+      .hero h1{max-width:8ch;font-size:clamp(3.5rem,15vw,6.4rem)}
+      .copy{max-width:650px}
     }
-
-    * { box-sizing: border-box; }
-
-    html, body { min-height: 100%; }
-
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Baskerville, Georgia, serif;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    main {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      width: min(calc(100% - 40px), var(--max));
-      margin: 0 auto;
-      padding: 42px 0 28px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      border-bottom: 1px solid var(--rule);
-      padding-bottom: 18px;
-    }
-
-    .wordmark {
-      font-size: 0.82rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .mark {
-      width: 34px;
-      height: 34px;
-      border: 1px solid var(--ink);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-size: 0.62rem;
-      letter-spacing: 0.05em;
-      line-height: 1;
-    }
-
-    .hero {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 11vh 0 10vh;
-      max-width: 760px;
-    }
-
-    h1 {
-      margin: 0;
-      font-weight: 400;
-      font-size: clamp(3.5rem, 9vw, 7.6rem);
-      line-height: 0.92;
-      letter-spacing: -0.045em;
-      max-width: 9ch;
-    }
-
-    .tagline {
-      margin: 34px 0 0;
-      font-size: clamp(1.45rem, 3vw, 2rem);
-      font-style: italic;
-      line-height: 1.2;
-    }
-
-    .intro {
-      margin: 56px 0 0;
-      max-width: 650px;
-      font-size: clamp(1.08rem, 2vw, 1.28rem);
-      line-height: 1.65;
-    }
-
-    .intro p { margin: 0 0 1.15em; }
-
-    .status {
-      margin-top: 42px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 0.76rem;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    .status::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border: 1px solid var(--ink);
-      border-radius: 50%;
-      display: block;
-    }
-
-    footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      border-top: 1px solid var(--rule);
-      padding-top: 18px;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 0.74rem;
-      color: var(--muted);
-    }
-
-    footer p { margin: 0; }
-
-    @media (max-width: 620px) {
-      main {
-        width: min(calc(100% - 30px), var(--max));
-        padding-top: 24px;
-      }
-
-      header { padding-bottom: 14px; }
-
-      .hero {
-        padding: 12vh 0 11vh;
-      }
-
-      h1 {
-        font-size: clamp(3.15rem, 17vw, 5rem);
-      }
-
-      .tagline {
-        margin-top: 24px;
-      }
-
-      .intro {
-        margin-top: 42px;
-        font-size: 1.05rem;
-        line-height: 1.58;
-      }
-
-      footer {
-        flex-direction: column;
-        gap: 7px;
-      }
+    @media(max-width:520px){
+      .masthead .note{display:none}
+      main{gap:48px;padding-top:9vh}
+      .hero h1{font-size:clamp(3.15rem,17vw,4.7rem)}
+      .tagline{margin-top:22px;font-size:1.32rem}
+      .copy .lead{font-size:1.18rem}
+      footer{flex-direction:column;gap:6px}
     }
   </style>
 </head>
-
 <body>
-  <main>
-    <header aria-label="Site header">
-      <div class="wordmark">Long Live Libre Press</div>
-      <div class="mark" aria-hidden="true">LLLP</div>
+  <div class="page">
+    <header class="masthead">
+      <p class="name">Long Live Libre Press</p>
+      <p class="note">Independent reading project · Est. 2026</p>
     </header>
-
-    <section class="hero">
-      <h1>Long Live Libre Press</h1>
-      <p class="tagline">For a reading life.</p>
-
-      <div class="intro">
-        <p>Long Live Libre Press is an independent project devoted to books, discovery and the life that develops around reading.</p>
-        <p>We believe good books deserve to remain in circulation — passed between people, rediscovered, argued with, written in, returned to and connected with other ideas.</p>
-        <p>We are building thoughtful curation, original editorial work and reading experiences designed to help people discover what to read, why it matters and where it might lead them next.</p>
-      </div>
-
-      <div class="status">Currently being built</div>
-    </section>
-
+    <main>
+      <section class="hero">
+        <h1>Long Live Libre Press</h1>
+        <p class="tagline">For a reading life.</p>
+      </section>
+      <section class="copy">
+        <p class="lead">Books are better when they lead somewhere.</p>
+        <p>Long Live Libre Press is an independent reading project built around discovery, curation and the connections between books.</p>
+        <p>We are creating carefully assembled reading collections, original editorial work and new ways to help people find what to read, why it matters and where it might lead them next.</p>
+        <p>Because the value of a good book rarely ends on its final page.</p>
+        <div class="status">First collections in development</div>
+      </section>
+    </main>
     <footer>
       <p>© 2026 Long Live Libre Press</p>
       <p>For a reading life.</p>
     </footer>
-  </main>
+  </div>
 </body>
 </html>
