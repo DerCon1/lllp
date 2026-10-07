@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You're on the Reading List — Long Live Libre Press</title>
+  <meta name="description" content="Your subscription to the Long Live Libre Press Reading List is confirmed.">
+  <meta name="theme-color" content="#efeae0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+
+:root {
+  --paper: #efeae0;
+  --ink: #171613;
+  --muted: #6b655b;
+  --rule: #b7afa0;
+  --max: 980px;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "EB Garamond", Garamond, Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.page {
+  width: min(calc(100% - 54px), var(--max));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 0 24px;
+}
+.masthead {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 14px 0 13px;
+}
+.masthead .name {
+  margin: 0;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.masthead .note {
+  margin: 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--muted);
+}
+main {
+  flex: 1;
+  padding: clamp(72px, 10vh, 118px) 0 90px;
+}
+.eyebrow {
+  margin: 0 0 16px;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.confirmation { max-width: 720px; }
+h1 {
+  margin: 0 0 28px;
+  max-width: 9ch;
+  font-size: clamp(3.5rem, 7vw, 6.8rem);
+  font-weight: 500;
+  line-height: 0.93;
+  letter-spacing: -0.045em;
+}
+.intro {
+  max-width: 690px;
+  margin: 0 0 28px;
+  font-size: clamp(1.32rem, 2.2vw, 1.72rem);
+  line-height: 1.45;
+}
+.detail {
+  max-width: 650px;
+  font-size: 1.08rem;
+  line-height: 1.68;
+  margin: 0 0 16px;
+}
+.quiet {
+  margin-top: 34px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  max-width: 650px;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+.return {
+  display: inline-block;
+  margin-top: 24px;
+  color: inherit;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 2px;
+}
+footer {
+  border-top: 1px solid var(--ink);
+  padding-top: 13px;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  font-size: 0.69rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+footer p { margin: 0; }
+@media (max-width: 620px) {
+  .page {
+    width: min(calc(100% - 34px), var(--max));
+    padding-top: 18px;
+  }
+  .masthead .note { display: none; }
+  main { padding-top: 9vh; }
+  h1 { font-size: clamp(3rem, 15vw, 4.8rem); }
+  .intro { font-size: 1.25rem; }
+}
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <p class="name">Long Live Libre Press</p>
+      <p class="note">For a reading life.</p>
+    </header>
+
+    <main>
+      <div class="confirmation">
+        <p class="eyebrow">The Reading List</p>
+        <h1>You're in.</h1>
+
+        <p class="intro">
+          Your place on the Reading List is confirmed.
+        </p>
+
+        <p class="detail">
+          We will write when there is something worth sending: new collections,
+          essays, books worth following, and occasional letters from Long Live Libre Press.
+        </p>
+
+        <p class="detail">
+          Until then, keep reading.
+        </p>
+
+        <p class="quiet">
+          Books are better when they lead somewhere.
+        </p>
+
+        <a class="return" href="/">Return to Long Live Libre Press</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 Long Live Libre Press</p>
+    </footer>
+  </div>
+</body>
+</html>
